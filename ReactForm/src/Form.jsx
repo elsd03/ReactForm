@@ -8,15 +8,17 @@ function Form() {
         notes: '',
         repeat: false,
       });
+      
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         const newValue = type === 'checkbox' ? checked : value;
         setFormData({ ...formData, [name]: newValue });
       };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+        alert("Succes");
       };
 
   return (
@@ -75,7 +77,7 @@ function Form() {
         rows="10"
        />
 
-      <button type="submit"> Gonder</button>
+      <button type="submit">Gonder</button>
 
     </form>
   )
